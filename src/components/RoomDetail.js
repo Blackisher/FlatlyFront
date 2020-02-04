@@ -185,6 +185,8 @@ class RoomDetail extends Component {
             fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/${id}`, {
                 method: "GET",
                 headers: {
+                    crossDomain: true,
+                    'Access-Control-Allow-Origin': '*',
                     Accept: 'application/json',
                     'Content-Type': 'application/json',
                     'security_header': 'someExtremelyRandomCode!@#$%^&*()',
@@ -202,6 +204,8 @@ class RoomDetail extends Component {
         fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/payment`, {
             method: "GET",
             headers: {
+                crossDomain: true,
+                'Access-Control-Allow-Origin': '*',
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
                 'security_header': 'someExtremelyRandomCode!@#$%^&*()',
@@ -413,6 +417,8 @@ class RoomDetail extends Component {
             fetch("http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats", {
                 method: "POST",
                 headers: {
+                    crossDomain: true,
+                    'Access-Control-Allow-Origin': '*',
                     "Content-Type": "application/json",
                     Accept: "application/json",
                     'security_header': 'someExtremelyRandomCode!@#$%^&*()',
@@ -434,6 +440,8 @@ class RoomDetail extends Component {
             fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/${idFlat}`, {
                 method: "POST",
                 headers: {
+                    crossDomain: true,
+                    'Access-Control-Allow-Origin': '*',
                     "Content-Type": "application/json",
                     Accept: "application/json",
                     'security_header': 'someExtremelyRandomCode!@#$%^&*()',

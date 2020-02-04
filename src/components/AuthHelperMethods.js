@@ -24,6 +24,8 @@ class AuthHelperMethods extends Component {
         return this.fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/users`, {
             method: "POST",
             headers: {
+                crossDomain: true,
+                'Access-Control-Allow-Origin': '*',
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
                 'security_header': 'someExtremelyRandomCode!@#$%^&*()',

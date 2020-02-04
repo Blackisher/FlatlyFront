@@ -35,6 +35,8 @@ class MyProfile extends Component {
         fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/users/${idUser}`, {
             method: "GET",
             headers: {
+                crossDomain: true,
+                'Access-Control-Allow-Origin': '*',
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
                 'security_header': 'someExtremelyRandomCode!@#$%^&*()',
@@ -101,6 +103,8 @@ class MyProfile extends Component {
         fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/users/${idUser}`, {
             method: "POST",
             headers: {
+                crossDomain: true,
+                'Access-Control-Allow-Origin': '*',
                 "Content-Type": "application/json",
                 Accept: "application/json",
                 'security_header': 'someExtremelyRandomCode!@#$%^&*()',

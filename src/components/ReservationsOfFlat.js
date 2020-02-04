@@ -21,6 +21,8 @@ class ReservationsOfFlat extends React.Component {
         fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings/flat/${id}`, {
             method: "GET",
             headers: {
+                crossDomain: true,
+                'Access-Control-Allow-Origin': '*',
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
                 'security_header': 'someExtremelyRandomCode!@#$%^&*()',
