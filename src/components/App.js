@@ -36,11 +36,11 @@ class App extends Component {
                 <Switch>
                     <PublicRoute exact component={LoginPage} path="/"/>
 
-                    <PrivateRoute exact component={HomePage} path="/home"/>
+                    <PublicRoute exact component={HomePage} path="/home"/>
 
-                    <PrivateRoute exact component={MyProfile} path="/profile"/>
+                    <PublicRoute exact component={MyProfile} path="/profile"/>
 
-                    <PrivateRoute exact component={ReservationsOfFlat} path="/reservations/flat/:id"/>
+                    <PublicRoute exact component={ReservationsOfFlat} path="/reservations/flat/:id"/>
 
                     <PrivateRoute exact component={AllReservations} path="/reservations/"/>
 
