@@ -32,7 +32,7 @@ class MyProfile extends Component {
         const hashedPassword = passwordHash.generate('password123');
         console.log(hashedPassword);
 
-        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/users/${idUser}`, {
+        fetch(`https://flatly-thursday.us-east-1.elasticbeanstalk.com/users/${idUser}`, {
             method: "GET",
             headers: {
                 Accept: 'application/json',
@@ -97,8 +97,8 @@ class MyProfile extends Component {
 
     changeUserInfo() {
         console.log(this.state.userDetail);
-        //http://flatly-thursday.us-east-1.elasticbeanstalk.com/users/1
-        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/users/${idUser}`, {
+        //https://flatly-thursday.us-east-1.elasticbeanstalk.com/users/1
+        fetch(`https://flatly-thursday.us-east-1.elasticbeanstalk.com/users/${idUser}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
