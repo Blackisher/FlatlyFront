@@ -1,4 +1,4 @@
-//inspiration from link https://medium.com/@romanchvalbo/how-i-set-up-react-and-node-with-json-web-token-for-authentication-259ec1a90352
+//inspiration from link http://medium.com/@romanchvalbo/how-i-set-up-react-and-node-with-json-web-token-for-authentication-259ec1a90352
 
 import React, {Component} from 'react';
 import "../css/App.css";
@@ -21,7 +21,7 @@ class AuthHelperMethods extends Component {
     login = (login, password) => {
         // Get a token from api server using the fetch api
 
-        return this.fetch(`https://flatly-thursday.us-east-1.elasticbeanstalk.com/users`, {
+        return this.fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/users`, {
             method: "POST",
             headers: {
                 Accept: 'application/json',

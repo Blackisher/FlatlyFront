@@ -9,7 +9,7 @@ import {idUser} from "./AuthHelperMethods"
 
 class AllReservations extends React.Component {
     componentDidMount() {
-        fetch(`https://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings?id=${idUser}`, {
+        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings?id=${idUser}`, {
                 method: "GET",
                 headers: {
                     Accept: 'application/json',
