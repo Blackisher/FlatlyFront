@@ -1,0 +1,16 @@
+.form label, .form input, .form textarea {
+    display: block;
+}
+
+.nameOfPage {
+    text-align: center;
+    margin-top:20px;
+}
+
+.btns {
+    text-align: right;
+}
+
+.btn-green-hover:hover{
+    color: #5cb85c;
+}
