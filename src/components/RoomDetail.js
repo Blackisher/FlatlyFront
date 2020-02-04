@@ -182,7 +182,14 @@ class RoomDetail extends Component {
         if (this.props.mode === "edit") {
             let id = this.props.id;
             //http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/1
-            fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/${id}`)
+            fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/${id}`, {
+                method: "GET",
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                    'security_header': 'someExtremelyRandomCode!@#$%^&*()',
+                }
+            })
                 .then((data) => data.json())
                 .then((flat) => {
                     this.props.flatDetailLoaded(flat);
@@ -192,7 +199,14 @@ class RoomDetail extends Component {
                 });
         }
         //
-        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/payment`)
+        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/payment`, {
+            method: "GET",
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'security_header': 'someExtremelyRandomCode!@#$%^&*()',
+            }
+        })
             .then((data) => data.json())
             .then((methods) => {
                 this.setState({all_payment_methods: methods}, () => {
@@ -400,7 +414,8 @@ class RoomDetail extends Component {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Accept: "application/json"
+                    Accept: "application/json",
+                    'security_header': 'someExtremelyRandomCode!@#$%^&*()',
                 },
                 body: JSON.stringify(flat)
             }).then((res) => {
@@ -420,7 +435,8 @@ class RoomDetail extends Component {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Accept: "application/json"
+                    Accept: "application/json",
+                    'security_header': 'someExtremelyRandomCode!@#$%^&*()',
                 },
                 body: JSON.stringify(flat)
             }).then(res => {

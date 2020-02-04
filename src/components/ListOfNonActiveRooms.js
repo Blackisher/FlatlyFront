@@ -19,7 +19,14 @@ class ListOfNonActiveRooms extends Component {
     componentDidMount() {
         if (this.props.flats === undefined) {
          //   http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats?id=1
-            fetch(` http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/nonactive?id=${idUser}`)
+            fetch(` http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/nonactive?id=${idUser}`, {
+                method: "GET",
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                    'security_header': 'someExtremelyRandomCode!@#$%^&*()',
+                }
+            })
                 .then((data) => data.json())
                 .then((flats) => {
                     this.props.flatsNonactiveLoaded(flats);

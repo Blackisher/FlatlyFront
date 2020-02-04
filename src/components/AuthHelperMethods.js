@@ -26,6 +26,7 @@ class AuthHelperMethods extends Component {
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
+                'security_header': 'someExtremelyRandomCode!@#$%^&*()',
             },
             body: JSON.stringify({
                 login,

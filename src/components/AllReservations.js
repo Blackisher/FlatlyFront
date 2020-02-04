@@ -9,13 +9,19 @@ import {idUser} from "./AuthHelperMethods"
 
 class AllReservations extends React.Component {
     componentDidMount() {
-        //http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings?id=
-        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings?id=${idUser}`)
-            .then((data) => data.json())
+        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings?id=${idUser}`, {
+                method: "GET",
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                    'security_header': 'someExtremelyRandomCode!@#$%^&*()',
+                }
+            }
+        ).then((data) => data.json())
             .then((reservations) => {
                 console.log(reservations)
                 this.props.bookingsLoaded(reservations);
-            });
+        });
     }
 
     render() {

@@ -18,7 +18,14 @@ class ReservationsOfFlat extends React.Component {
         this.setState({idFlat: id});
         console.log(id)
         //http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings/flat/1
-        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings/flat/${id}`)
+        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings/flat/${id}`, {
+            method: "GET",
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'security_header': 'someExtremelyRandomCode!@#$%^&*()',
+            }
+        })
             .then((data) => data.json())
             .then((reservations) => {
                 console.log(reservations)
