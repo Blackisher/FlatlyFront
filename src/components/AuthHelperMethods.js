@@ -28,7 +28,7 @@ class AuthHelperMethods extends Component {
                 'Access-Control-Allow-Origin': '*',
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
-                'security_header': 'someExtremelyRandomCode!@#$%^&*()',
+              // 'security_header': 'someExtremelyRandomCode!@#$%^&*()',
             },
             body: JSON.stringify({
                 login,
