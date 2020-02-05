@@ -181,8 +181,8 @@ class RoomDetail extends Component {
         //fetch roomdetail if edit
         if (this.props.mode === "edit") {
             let id = this.props.id;
-            //http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/1
-            fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/${id}`, {
+            //http://flatly.us-east-1.elasticbeanstalk.com/flats/1
+            fetch(`http://flatly.us-east-1.elasticbeanstalk.com/flats/${id}`, {
                 method: "GET",
                 headers: {
                     crossDomain: true,
@@ -201,7 +201,7 @@ class RoomDetail extends Component {
                 });
         }
         //
-        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/payment`, {
+        fetch(`http://flatly.us-east-1.elasticbeanstalk.com/payment`, {
             method: "GET",
             headers: {
                 crossDomain: true,
@@ -414,7 +414,7 @@ class RoomDetail extends Component {
         if (mode === "create") {
             flat = {...flat, id: idFlat}
 
-            fetch("http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats", {
+            fetch("http://flatly.us-east-1.elasticbeanstalk.com/flats", {
                 method: "POST",
                 headers: {
                     crossDomain: true,
@@ -437,7 +437,7 @@ class RoomDetail extends Component {
             });
         } else {
 
-            fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/${idFlat}`, {
+            fetch(`http://flatly.us-east-1.elasticbeanstalk.com/flats/${idFlat}`, {
                 method: "POST",
                 headers: {
                     crossDomain: true,

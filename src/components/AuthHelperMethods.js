@@ -21,7 +21,7 @@ class AuthHelperMethods extends Component {
     login = (login, password) => {
         // Get a token from api server using the fetch api
 
-        return this.fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/users`, {
+        return this.fetch(`http://flatly.us-east-1.elasticbeanstalk.com/users`, {
             method: "POST",
             headers: {
                 crossDomain: true,

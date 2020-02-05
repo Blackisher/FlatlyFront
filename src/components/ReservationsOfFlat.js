@@ -17,8 +17,8 @@ class ReservationsOfFlat extends React.Component {
         let id = this.props.match.params.id;
         this.setState({idFlat: id});
         console.log(id)
-        //http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings/flat/1
-        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings/flat/${id}`, {
+        //http://flatly.us-east-1.elasticbeanstalk.com/bookings/flat/1
+        fetch(`http://flatly.us-east-1.elasticbeanstalk.com/bookings/flat/${id}`, {
             method: "GET",
             headers: {
                 crossDomain: true,

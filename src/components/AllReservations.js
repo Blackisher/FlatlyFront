@@ -9,7 +9,7 @@ import {idUser} from "./AuthHelperMethods"
 
 class AllReservations extends React.Component {
     componentDidMount() {
-        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/bookings?id=${idUser}`, {
+        fetch(`http://flatly.us-east-1.elasticbeanstalk.com/bookings?id=${idUser}`, {
                 method: "GET",
                 headers: {
                     crossDomain: true,

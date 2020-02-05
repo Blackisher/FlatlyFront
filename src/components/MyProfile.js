@@ -32,7 +32,7 @@ class MyProfile extends Component {
         const hashedPassword = passwordHash.generate('password123');
         console.log(hashedPassword);
 
-        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/users/${idUser}`, {
+        fetch(`http://flatly.us-east-1.elasticbeanstalk.com/users/${idUser}`, {
             method: "GET",
             headers: {
                 crossDomain: true,
@@ -99,8 +99,8 @@ class MyProfile extends Component {
 
     changeUserInfo() {
         console.log(this.state.userDetail);
-        //http://flatly-thursday.us-east-1.elasticbeanstalk.com/users/1
-        fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/users/${idUser}`, {
+        //http://flatly.us-east-1.elasticbeanstalk.com/users/1
+        fetch(`http://flatly.us-east-1.elasticbeanstalk.com/users/${idUser}`, {
             method: "POST",
             headers: {
                 crossDomain: true,

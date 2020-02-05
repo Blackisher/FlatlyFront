@@ -24,8 +24,8 @@ class ListOfActiveRooms extends Component {
 
     componentDidMount() {
         if (this.props.flats === undefined) {
-            //http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats?id=1
-            fetch(`http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats?id=${idUser}`, {
+            //http://flatly.us-east-1.elasticbeanstalk.com/flats?id=1
+            fetch(`http://flatly.us-east-1.elasticbeanstalk.com/flats?id=${idUser}`, {
                 method: "GET",
                 headers: {
                     crossDomain: true,
@@ -148,7 +148,7 @@ class ListOfActiveRooms extends Component {
     }
 
     onDeleteClick(id) {
-        fetch("http://flatly-thursday.us-east-1.elasticbeanstalk.com/flats/delete/" + id, {
+        fetch("http://flatly.us-east-1.elasticbeanstalk.com/flats/delete/" + id, {
             method: 'POST',
             headers: {
                 crossDomain: true,
